@@ -1,3 +1,5 @@
+import 'package:aquapro/home_page.dart';
+import 'package:aquapro/schedule.dart';
 import 'package:flutter/material.dart';
 import 'dates.dart';
 import 'modes.dart';
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "AquaHack",
+        title: "Aquapro",
         theme: ThemeData(
           primarySwatch: Colors.lightBlue,
         ),
@@ -26,6 +28,17 @@ class Home_Page extends StatefulWidget {
 
 class _Home_PageState extends State<Home_Page> {
   int secilenMunuItem = 0;
+  List<Widget> allPages;
+  AnaSayfa anaSayfa;
+  Schedule schedulePage;
+
+  @override
+  void initState() {
+    super.initState();
+    anaSayfa = AnaSayfa();
+    schedulePage = Schedule();
+    allPages = [anaSayfa, schedulePage];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,33 +47,28 @@ class _Home_PageState extends State<Home_Page> {
         centerTitle: true,
         elevation: 0,
         title: Text(
-          "List lessonssss",
+          "Aquapro",
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: Column(
-        children: <Widget>[
-          Dates(),
-          Modes(),
-        ],
-      ),
+      body: allPages[secilenMunuItem],
       bottomNavigationBar: bottomNavMenu(),
     );
   }
-   bottomNavMenu(){
+
+  bottomNavMenu() {
     return BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("home")),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.av_timer), title: Text("schedule")),
-        ],
-        currentIndex: secilenMunuItem,
-        onTap: (index) {
-          setState(() {
-            secilenMunuItem = index;
-          });
-        },
-      );
-}
+      items: <BottomNavigationBarItem>[
+        BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("home")),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.av_timer), title: Text("schedule")),
+      ],
+      currentIndex: secilenMunuItem,
+      onTap: (index) {
+        setState(() {
+          secilenMunuItem = index;
+        });
+      },
+    );
   }
-  
+}
