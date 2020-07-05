@@ -21,7 +21,6 @@ class Aquaproicon {
   static const _kFontFam = 'Aquaproicon';
   static const _kFontPkg = null;
 
-  static const IconData sponge = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData water = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData tap = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData iconfinder_hand_cleaning = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData iconfinder_dishes_hand_wash = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

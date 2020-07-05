@@ -15,7 +15,7 @@ class Modes extends StatelessWidget {
               //mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.only(top:37,bottom: 45),
+                  margin: EdgeInsets.only(top: 37, bottom: 45),
                   height: 300,
                   width: 300,
                   color: Colors.grey[50],
@@ -26,14 +26,14 @@ class Modes extends StatelessWidget {
                         width: 200,
                         height: 200,
                         decoration: BoxDecoration(
-                          border: Border.all(width: 1,color: Colors.lightBlue),
+                          border: Border.all(width: 1, color: Colors.lightBlue),
                           boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey,
-                    offset: Offset(0.7, 4.0), //(x,y)
-                    blurRadius: 6.0,
-                  ),
-                ],
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.7, 4.0), //(x,y)
+                              blurRadius: 6.0,
+                            ),
+                          ],
                           // border: Border.all(width: 2),
                           shape: BoxShape.circle,
                           // You can use like this way or like the below line
@@ -44,11 +44,12 @@ class Modes extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Text('17.3 L',style: TextStyle(fontSize: 30,color: Colors.lightBlue)),
-                            
+                            Text('17.3 L',
+                                style: TextStyle(
+                                    fontSize: 30, color: Colors.lightBlue)),
                           ],
                         ),
-                        margin: EdgeInsets.only(top :30,bottom: 30),
+                        margin: EdgeInsets.only(top: 30, bottom: 30),
                       ),
                       /* Container(
                         child: Icon(Aquaproicon.water,size: 100,color: Colors.blue)
@@ -84,27 +85,9 @@ class Modes extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Text("Əl yuma"),
-                      Container(
-                        child: Icon(
-                          MdiIcons.handWater,
-                          size: 60,
-                          color: Colors.lightBlue[400],
-
-                          
-                          ),
-                        
-                        ),
-
-                      /* Container(
-                        height: 50,
-                        width: 50,
-                        margin: EdgeInsets.all(0.0),
-                        decoration: BoxDecoration(
-                          
-                        color: Colors.orange, shape: BoxShape.circle), 
-
-                      ), */
-                      Text("5 L"),
+                      Image.asset(
+                          "lib/assets/iconfinder_Hand-cleaning-healthy-wash-water.png"),
+                      Text("5L"),
                     ],
                   ),
                 ),
@@ -116,26 +99,22 @@ class Modes extends StatelessWidget {
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.all(10),
-                  height: 100,
-                  width: 100,
+                  height: 150,
+                  width: 150,
                   color: Colors.grey[50],
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      Text("Əl yuma"),
-                      Container(
-                        height: 50,
-                        width: 50,
-                        margin: EdgeInsets.all(0.0),
-                        decoration: BoxDecoration(
-                            color: Colors.orange, shape: BoxShape.circle),
-                      ),
-                      Text("3 L"),
+                      Text("Qab yuma"),
+                      Image.asset(
+                          "lib/assets/iconfinder_Dishes-hand-wash-virus-cleaning.png"),
+                      Text("12.3L"),
                     ],
                   ),
                 ),
               ],
             ),
+            
           ],
         ),
       ],
