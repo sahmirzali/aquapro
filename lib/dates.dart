@@ -17,7 +17,7 @@ class _DatesState extends State<Dates> {
           padding: EdgeInsets.all(10),
           margin: EdgeInsets.all(0),
           child: Center(
-            child: Text("General 2020"),
+            child: Text("il - 2020 ",style: TextStyle(color: Colors.white,fontSize: 17),),
           ),
         ),
       ],
